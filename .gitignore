@@ -1,0 +1,16 @@
+# Papyrus compiled output
+*.pex
+
+# xEdit backups
+*.esp.bak
+*.esm.bak
+
+# Creation Kit temp files
+*.tmp
+
+# Build output
+/build/
+/dist/
+
+# MO2 profile-local junk if ever authored alongside
+*.mohidden
