@@ -24,7 +24,13 @@ def main() -> None:
     print(f"[ok] world generated: tick={state.tick}, "
           f"leagues={len(getattr(state, 'leagues', {}) or {})}, "
           f"teams={len(getattr(state, 'teams', {}) or {})}, "
-          f"tracks={len(getattr(state, 'tracks', {}) or {})}")
+          f"tracks={len(getattr(state, 'tracks', {}) or {})}, "
+          f"manufacturers={len(getattr(state, 'manufacturers', {}) or {})}, "
+          f"parts={len(getattr(state, 'parts_catalog', {}) or {})}")
+
+    mfrs = list(getattr(state, "manufacturers", {}).values())[:5]
+    if mfrs:
+        print("[ok] sample manufacturers: " + ", ".join(f"{m.name} ({m.nationality})" for m in mfrs))
 
     total_events = 0
     for day in range(14):

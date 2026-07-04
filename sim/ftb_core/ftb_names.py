@@ -995,82 +995,36 @@ TRACK_LOCATIONS = [
     "Elite", "Classic", "Legacy", "Iconic", "Legendary",
 
     # ------------------------------------------------------------------
-    # REAL-WORLD CITY / METRO DESCRIPTORS (safe, non-licensed)
-    # Use as adjectives, not official circuits
+    # SETTLED SYSTEMS LOCATIONS (Starfield re-theme, replacing real-world
+    # city descriptors — 2026-07-04, docs/DECISIONS.md)
+    # A handful are real in-lore Starfield locations (verify against your
+    # own game knowledge, not guaranteed lore-accurate); the rest are
+    # invented frontier/settlement names in the same spirit as the
+    # "Fictional/Atmospheric locations" block further below, which was
+    # left as-is since it already reads setting-neutral.
     # ------------------------------------------------------------------
 
-    # North America  
-    "Toronto", "Montreal", "Vancouver", "Calgary",
-    "New York", "Chicago", "Detroit", "Austin",
-    "Miami", "Los Angeles", "San Francisco",
-    "Seattle", "Denver", "Phoenix", "Las Vegas",
-    "Boston", "Philadelphia", "Atlanta", "Dallas",
-    "Houston", "Minneapolis", "Portland", "Indianapolis",
-    "Charlotte", "Nashville", "Memphis", "New Orleans",
-    "San Diego", "San Jose", "Sacramento", "Salt Lake City",
-    "Kansas City", "Milwaukee", "Cincinnati", "Cleveland",
-    "Pittsburgh", "St. Louis", "Tampa", "Orlando",
-    "Baltimore", "Washington", "Richmond", "Raleigh",
+    # Likely-real Starfield locations (double-check before treating as canon)
+    "New Atlantis", "Akila", "Neon", "Cydonia", "Paradiso", "The Well",
+    "Jemison", "Gagarin", "Porrima", "Volii",
 
-    # Europe
-    "Frankfurt", "Munich", "Berlin", "Hamburg",
-    "London", "Silverstone",  # tone-only, not venue
-    "Paris", "Lyon", "Marseille",
-    "Milan", "Monza",         # tone-only
-    "Rome", "Barcelona", "Madrid",
-    "Amsterdam", "Vienna", "Prague",
-    "Budapest", "Warsaw",
-    "Spa", "Ardennes",        # regional flavor
-    "Stockholm", "Helsinki",
-    "Birmingham", "Manchester", "Leeds", "Edinburgh", "Glasgow",
-    "Brussels", "Antwerp", "Ghent", "Liege",
-    "Copenhagen", "Oslo", "Gothenburg", "Bergen",
-    "Lisbon", "Porto", "Valencia", "Seville",
-    "Naples", "Turin", "Florence", "Bologna",
-    "Cologne", "Stuttgart", "Dresden", "Leipzig",
-    "Athens", "Thessaloniki", "Istanbul", "Ankara",
-    "Dublin", "Cork", "Zurich", "Geneva",
+    # Invented UC-adjacent / core-world settlements
+    "New Meridian", "Terminus Yard", "Ironhold", "Wellspring", "Farrange",
+    "Skyhaven", "Longshot Station", "Duskfall", "Drift Anchor", "Clearwater Dome",
+    "Halcyon Rise", "Beacon's Reach", "Founder's Landing", "Coreline", "Gateway Prime",
 
-    # Asia
-    "Shanghai", "Beijing", "Shenzhen",
-    "Hong Kong", "Macau",
-    "Tokyo", "Osaka", "Nagoya",
-    "Seoul", "Busan",
-    "Singapore",
-    "Bangkok", "Kuala Lumpur",
-    "Jakarta", "Manila",
-    "Taipei", "Kaohsiung", "Hanoi", "Ho Chi Minh",
-    "Delhi", "Mumbai", "Bangalore", "Hyderabad",
-    "Chennai", "Kolkata", "Pune", "Ahmedabad",
-    "Karachi", "Lahore", "Islamabad", "Dhaka",
+    # Invented frontier / Freestar-adjacent settlements
+    "Rustline", "Homestead Bend", "Dustbowl", "Sagebrush Flats", "Grit Hollow",
+    "Backwater Junction", "Lonesome Ridge", "Broke Axle", "Tumbleweed Run", "Redshift Gulch",
+    "Deadstick", "Scrapfall", "Outer Notch", "Nine Mile Post", "Boneyard Crossing",
 
-    # Middle East
-    "Dubai", "Abu Dhabi", "Doha",
-    "Riyadh", "Jeddah",
-    "Kuwait City", "Manama", "Muscat", "Amman",
-    "Beirut", "Damascus", "Baghdad", "Tehran",
+    # Invented deep-frontier / outlaw / salvager settlements
+    "Blacklight", "Nomad's Rest", "Shadow Berth", "Hollow Anchorage", "Driftward",
+    "Void's Edge", "Ashfall", "Nullpoint", "Wraith Cradle", "Static Reach",
 
-    # South America
-    "São Paulo", "Rio", "Interlagos",  # tone-only
-    "Buenos Aires", "Cordoba",
-    "Santiago", "Lima", "Bogotá",
-    "Brasilia", "Salvador", "Fortaleza", "Recife",
-    "Montevideo", "Asuncion", "La Paz", "Quito",
-    "Caracas", "Medellin", "Cartagena", "Cali",
+    # Invented orbital / station-flavored (for later ship-racing reuse)
+    "High Anchor", "Dock Seven", "Relay Station", "Beltway Junction", "Orbital Reach",
 
-    # Oceania
-    "Melbourne", "Sydney", "Adelaide",
-    "Perth", "Auckland",
-    "Brisbane", "Gold Coast", "Wellington", "Christchurch",
-    "Canberra", "Newcastle", "Hobart", "Darwin",
-
-    # Africa
-    "Cape Town", "Johannesburg",
-    "Durban", "Casablanca", "Marrakesh",
-    "Cairo", "Alexandria", "Lagos", "Nairobi",
-    "Accra", "Dakar", "Addis Ababa", "Tunis",
-    "Algiers", "Lusaka", "Harare", "Maputo",
-    
     # Fictional/Atmospheric locations
     "Silver Lake", "Red Rock", "Blue Mountain", "Green Valley", "Golden Gate",
     "Crystal Bay", "Emerald Coast", "Sapphire Ridge", "Ruby Falls", "Diamond Peak",
