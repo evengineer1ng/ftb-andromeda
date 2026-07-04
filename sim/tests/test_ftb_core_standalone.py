@@ -21,9 +21,11 @@ def main() -> None:
     state.seed = 42
     WorldBuilder.generate_world(state)
 
+    leagues = getattr(state, "leagues", {}) or {}
+    total_teams = sum(len(getattr(lg, "teams", []) or []) for lg in leagues.values())
     print(f"[ok] world generated: tick={state.tick}, "
-          f"leagues={len(getattr(state, 'leagues', {}) or {})}, "
-          f"teams={len(getattr(state, 'teams', {}) or {})}, "
+          f"leagues={len(leagues)}, "
+          f"teams={total_teams} (across all leagues), "
           f"tracks={len(getattr(state, 'tracks', {}) or {})}, "
           f"manufacturers={len(getattr(state, 'manufacturers', {}) or {})}, "
           f"parts={len(getattr(state, 'parts_catalog', {}) or {})}")

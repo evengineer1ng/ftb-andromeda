@@ -1132,21 +1132,26 @@ def generate_track_name(seed: int, track_idx: int) -> Tuple[str, str]:
 
 # League descriptors for procedural naming
 LEAGUE_REGIONS = [
-    "Northern", "Southern", "Eastern", "Western", "Central", "Atlantic", "Pacific",
-    "Continental", "National", "International", "Regional", "Provincial", "Metropolitan",
+    # Generic directional/geographic — setting-neutral, kept as-is
+    "Northern", "Southern", "Eastern", "Western", "Central",
+    "Continental", "National", "Regional", "Provincial", "Metropolitan",
     "Coastal", "Mountain", "Valley", "Riverside", "Lakeside", "Highland", "Prairie",
-    "European", "American", "Asian", "Global", "World", "Premier", "Elite", "Grand",
-    # Additional league regions
+    "Global", "Premier", "Elite", "Grand",
     "Tri-State", "Northeast", "Southeast", "Midwest", "Southwest", "Northwest",
-    "Gulf Coast", "Great Lakes", "Sun Belt", "Rust Belt", "Interior",
-    "Mediterranean", "Scandinavian", "Baltic", "Adriatic", "Caribbean", "South Pacific",
-    "Intercontinental", "Transcontinental", "Pan-American", "Euro-Asian", "Indo-Pacific",
-    "Arctic", "Tropical", "Equatorial", "Polar", "Temperate", "Subtropical",
+    "Interior", "Arctic", "Tropical", "Equatorial", "Polar", "Temperate", "Subtropical",
     "Alpine", "Desert", "Forest", "Island", "Peninsula", "Archipelago",
     "Cross-Border", "Multi-State", "Interstate", "Interprovincial", "Cross-Region",
     "Heritage", "Historic", "Classic", "Modern", "Contemporary", "Traditional",
     "United", "Allied", "Federation", "Union", "League", "Association",
-    "Summit", "Horizon", "Frontier", "Pioneer", "Vanguard", "Advanced"
+    "Summit", "Horizon", "Frontier", "Pioneer", "Vanguard", "Advanced",
+    # Settled Systems re-theme (Starfield, 2026-07-04 — replaces Earth-specific
+    # regions: European/American/Asian/Atlantic/Pacific/Gulf Coast/Great Lakes/
+    # Sun Belt/Rust Belt/Mediterranean/Scandinavian/Baltic/Adriatic/Caribbean/
+    # South Pacific/Pan-American/Euro-Asian/Indo-Pacific/Intercontinental/
+    # Transcontinental)
+    "Core", "Rim", "Deep Rim", "Systemwide", "Settled Systems", "Colonial",
+    "Orbital", "Trans-Lunar", "Interstellar", "Multi-System", "Cross-System",
+    "Void", "Nebular", "Starlit", "Outbound", "Wayfarer", "Trailing", "Leading",
 ]
 
 LEAGUE_TYPES_GRASSROOTS = [
