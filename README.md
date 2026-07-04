@@ -7,7 +7,7 @@ See `docs/ARCHITECTURE.md` and `docs/DECISIONS.md` for the full plan.
 ## Toolchain
 
 - **Creative VM** (this repo's home): source of truth for all mod source — Papyrus scripts, xEdit-edited plugins, the forked/re-themed simulation (`sim/`), docs, build scripts. No local Starfield install by design; game files never live here.
-- **Gaming VM**: the only place Starfield, Creation Kit, and xEdit actually run. Pulls this repo to author/test against live game data, pushes changes back. The simulation process (`sim/`) does **not** run here until commentary/live season tracking is deliberately turned on (see docs).
+- **Gaming VM**: the only place Starfield runs. Pulls this repo to author/test against live game data, pushes changes back. Toolchain there is deliberately minimal — xEdit (for quest/global/alias records) + a standalone Papyrus compiler + Mod Organizer 2. No Creation Kit install (see `docs/DECISIONS.md`, 2026-07-04). The simulation process (`sim/`) does **not** run here until commentary/live season tracking is deliberately turned on (see docs).
 - **Bridge**: this GitHub repo. No direct VM-to-VM sharing — everything routes through commits/releases, on purpose, to force versioning discipline.
 - **Distribution to Gaming VM's Mod Organizer 2**: build artifacts attached to GitHub Releases (tagged for milestones, a rolling pre-release for day-to-day iteration).
 

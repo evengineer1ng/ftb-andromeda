@@ -10,7 +10,7 @@
 
 Papyrus's job is reduced to three things, given known persistence fragility across Starfield updates (community guidance favors stateless scripts; a "Free Lanes" update broke Alias/ReferenceAlias/RefCollectionAlias calls in some mods):
 
-1. Write race events (checkpoint crossed, race start/finish) to a flat JSONL log via trigger volumes + a polling script.
+1. Write race events (checkpoint crossed, race start/finish) to a flat JSONL log. Checkpoints are `GetDistance()` polling against pre-existing vanilla markers/statics in the chosen location, not newly-placed trigger volumes — this avoids needing Creation Kit's 3D viewport (or an xEdit+Blender-JSON placement workaround) entirely. See docs/DECISIONS.md, 2026-07-04.
 2. Own the minimum durable state that must survive a save without the sim running: `race_state` (IDLE/RUNNING/FINISHED), later `current_tier` and `active_rivalry_driver_id`. Always versioned, always defensively read.
 3. Phase 1 grants its own reward directly in Papyrus (no live sim round-trip yet). Superseded at Sim Go-Live.
 
