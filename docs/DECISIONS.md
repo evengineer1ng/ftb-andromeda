@@ -15,5 +15,8 @@ Keeps the Gaming VM as a clean game+MO2 environment for now. Means Phase 0-4's s
 ## 2026-07-03 — Phase 1 is solo time-trial, not AI opponents
 No precedent exists for AI-driven rover opponents in Starfield. Treated as its own future feasibility spike rather than a Phase 1 blocker.
 
+## 2026-07-04 — Phase 0.5 complete: FTB core vendored and proven standalone
+Copied `ftb_game.py`/`ftb_names.py`/`ftb_race_day.py` from `F:\dev\oracle-radio\ftb_core\` into `sim/ftb_core/`, plus thin `sim/plugins/*.py` passthrough shims mirroring oracle-radio's own `plugins/` layout — this let all of `ftb_game.py`'s internal `from plugins.X import Y` lazy imports resolve unchanged, with zero edits to the vendored file itself. `sim/tests/test_ftb_core_standalone.py` proves `WorldBuilder.generate_world` + 14 days of `FTBSimulation.tick_simulation` run with no oracle-radio dependency (23 leagues, 18 tracks generated; 15k+ SimEvents over 14 days). Confirmed in passing: the `tkinter`/`customtkinter` UI section (SECTION 6) and the reference to a missing `plugins.ftb_heritage_templates` module are both already-optional/try-except-guarded in the source project itself — not something forking broke. Manufacturer/part generation currently no-ops as a result (heritage templates absent); writing Starfield-themed heritage templates is Phase 1 re-theming work regardless, so this isn't a new gap to fix, just one to fill on schedule.
+
 ## 2026-07-03 — No Starfield install on the Creative VM
 Deliberate: forces all mod content through git rather than blurring authoring and testing, and is a forcing function for commit discipline.

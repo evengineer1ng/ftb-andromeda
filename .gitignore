@@ -14,3 +14,9 @@
 
 # MO2 profile-local junk if ever authored alongside
 *.mohidden
+
+# Python (sim/)
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
